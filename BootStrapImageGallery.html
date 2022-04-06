@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- STYLES SHEET -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- TEXT CODE -->
+    <div class="jumbotron text-center">
+      <p id="text" class="text" style="overflow-x: auto">All salaries Table</p>
+ </div>
+
+
+ <!--- TABLE FOR INDIAN SALARY --->
+ <div  style="overflow-x: auto; display: none;" id="india" class="container">
+     <table class="table table-bordered">
+         <tr>
+             <td>ID</td>
+             <span></span>
+             <td>Name</td>
+             <td>Salary</td>
+         </tr>
+         <tr>
+            
+             <td>1</td>
+             <span></span>
+             <td>Raju</td>
+             <span></span>
+             <td>&#8377;2000</td>
+             <span></span>
+         </tr>
+         <tr>
+           
+             <td>2</td>
+             <span></span>
+             <td>Ram</td>
+             <span></span>
+             <td>&#8377;300</td>
+             <span></span>
+         </tr>
+         <tr>
+             
+             <td>3</td>
+             <span></span>
+             <td>Raj</td>
+             <span></span>
+             <td>&#8377;4000</td>
+             <span></span>
+         </tr>
+ </table>
+ </div>
+
+ <!--- TABLE FOR EUROPEAN SALARY --->
+ <div style="overflow-x:auto; display: none;" id="europe" class="container">
+     <table class="table table-bordered">
+             <tr>
+                 <td>ID</td>
+                 <span></span>
+                 <td>Name</td>
+                 <span></span>
+                 <td>Salary</td>
+             </tr>
+             <tr>
+                 <td>1</td>
+                 <span></span>
+                 <td>Rij</td>
+                 <span></span>
+                 <td>&euro;;2000</td>
+             </tr>
+             <tr>
+                 <td>2</td>
+                 <span></span>
+                 <td>grandious</td>
+                 <span></span>
+                 <td>&euro;;300</td>
+                 <span></span>
+             </tr>
+             <tr>
+                 <td>3</td>
+                 <span></span>
+                 <td>Richard</td>
+                 <span></span>
+                 <td>&euro;;4000</td>
+                 <span></span>
+             </tr>
+     </table>
+   </div>
+
+   <!--- TABLE FOR AMERICAN SALARY --->
+   <div style="overflow-x:auto;display: none;" id="america" class="container">
+     <table class="table table-bordered">
+             <tr>
+                 <td>ID</td>
+                 <span></span>
+                 <td>Name</td>
+                 <td>Salary</td>
+             </tr>
+             <tr>
+                 
+                 <td>1</td>
+                 <span></span>
+                 <td>Sam</td>
+                 <span></span>
+                 <td>&#36;2000</td>
+                 <span></span>
+             </tr>
+             <tr>
+                 
+                 <td>2</td>
+                 <span></span>
+                 <td>tekking</td>
+                 <span></span>
+                 <td>&#36;300</td>
+                 <span></span>
+             </tr>
+             <tr>
+              
+                 <td>3</td>
+                 <span></span>
+                 <td>Rack</td>
+                 <span></span>
+                 <td>&#36;4000</td>
+                 <span></span>
+             </tr>
+     </table>
+   </div>
+
+ <!--- ALL THE JAVASCRIPT FUNCTIONS --->
+ <script>
+     function hide(){
+         var A = document.getElementById("america");
+         A.style.display = "none"; 
+         var I = document.getElementById("india");
+         I.style.display = "none";  
+         var E = document.getElementById("europe");
+         E.style.display = "none";
+     }
+     function clickInd(){
+         var A = document.getElementById("america");
+         A.style.display = "none"; 
+         var I = document.getElementById("india");
+         I.style.display = "block";  
+         var E = document.getElementById("europe");
+         E.style.display = "none"; 
+     }
+     function clickAmer(){
+         var A = document.getElementById("america");
+         A.style.display = "block"; 
+         var I = document.getElementById("india");
+         I.style.display = "none";  
+         var E = document.getElementById("europe");
+         E.style.display = "none"; 
+     }
+     function clickEuro(){
+         var A = document.getElementById("america");
+         A.style.display = "none"; 
+         var I = document.getElementById("india");
+         I.style.display = "none";  
+         var E = document.getElementById("europe");
+         E.style.display = "block"; 
+     }
+ </script>
+
+ <!-- ALL THE BUTTONS IMPLEMENTATION -->
+ <div id="home-btn" class="text-center">
+     <button type="button" class="btn-general btn-white" ondblclick="hide()">Hide</button>
+     <button type="button" class="btn-general btn-white" ondblclick="clickInd()">India</button>
+     <button type="button" class="btn-general btn-white" ondblclick="clickAmer()">America</button>
+     <button type="button" class="btn-general btn-white" ondblclick="clickEuro()">Europe</button>
+ </div>
+
+
+<!-- ************************************************************************************************************** -->
+
+<!--  image gallery -->
+<div class="container">
+  <h2 class="well well-lg;jumbotron text-center">Image Gallery</h2>
+  <p class="text-center">Click on the images to enlarge them.</p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/lights.jpg" target="_blank">
+          <img src="img/lights.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>img1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/nature.jpg" target="_blank">
+          <img src="img/nature.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>img2</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/lights.jpg" target="_blank">
+          <img src="img/lights.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>img3</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/nature.jpg" target="_blank">
+          <img src="img/nature.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>img4</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/fjords.jpg" target="_blank">
+          <img src="img/fjords.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>img4</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/lights.jpg" target="_blank">
+          <img src="img/lights.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>img1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">  
+  <h2>Well Size</h2>  
+  <div class="well well-sm">Small</div>  
+  <div class="well">medium</div>  
+  <div class="well well-lg">Large </div>  
+</div> 
+
+</body>
+</html>
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- CSS STYLESHEET LINK -->
+  <link rel="stylesheet" href="styles.css">
+<title>Document</title>
+</head>
+<body>    
+      <!-- JS functions and code -->
+   <script>
+    // JS CODE
+
+    let num1 = 7;
+    let num2 = 8;
+
+    let add = num1+num2
+    let substract = num2 - num1;
+    let multi     = num1 * num2;
+    let division  = num2 / num1;
+    let moduleo   = num1 % num2;
+    let expo      = num1**num2;
+    let incre     = ++num1;
+    let decre     = --num2;
+
+    // document.write("addtion: "+add + "\n");
+
+    // document.write("substraction: "+substract + "\n" );
+    // document.write("multiplication: "+multi + "\n");
+    // document.write("modulo: "+moduleo + "\n");
+    // document.write("divition: "+division + "\n");
+    // document.write("increment: "+incre + "\n");
+    // document.write("decrement: "+decre + "\n");
+    // document.write("exponent: "+expo + "\n");
+</script>  
+
+    <!-- TABLE SECTIONS -->
+    <div style="overflow-x:auto;display: none;" id="america" class="container">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Addition</td>
+                    <td>Substraction</td>
+                    <td>multiplication</td>
+                    <td>Devision</td>
+                    <td>Exponent</td>
+                </tr>
+                <tr>
+                    
+                    <td><script> document.write(add)</script></td>
+                    <span></span>
+                    <td><script> document.write(substract)</script></td>
+                    <span></span>
+                    <td><script> document.write(multi)</script></td>
+                    <td><script> document.write(division)</script></td>
+                    <td><script> document.write(expo)</script></td>
+                </tr>
+        </table>
+   </div>
+   <script>
+       // FUNCTION STATEMENT
+        function showTable(){
+            var A = document.getElementById("america");
+            A.style.display = "block"; 
+            
+        }
+    </script>
+    
+    <!-- BUTTON STRUCTURE -->
+   <div id="home-btn" class="text-center">
+    <button type="button" class="btn-general btn-white" ondblclick="showTable()">SHOW</button>
+   </div>
+
+ 
+    
+</body>
+</html>

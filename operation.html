@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="operation"></p>
+    <p name="operation"></p>
+    <p name="operation"></p>
+    <p name="operation"></p>
+    <script>
+        function addition(arg1, arg2){
+            return arg1+arg2;
+        }
+        function substract(arg1, arg2){
+            return arg1-arg2;
+        }
+        function exponent(arg1, arg2){
+            return arg1**arg2;
+        }
+
+        document.getElementsByName("operation")[0].innerHTML = addition(30,20);
+        document.getElementsByName("operation")[1].innerHTML = substract(30,20);
+        document.getElementsByName("operation")[2].innerHTML = exponent(30,20);
+    </script>
+</body>
+</html>

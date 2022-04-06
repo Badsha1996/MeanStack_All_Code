@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Resizable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+  #resizable { width: 150px; height: 150px; padding: 0.5em; }
+  #resizable h3 { text-align: center; margin: 0; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <!-- MENU -->
+  <script>
+    $( function() {
+      $( "#menu" ).menu();
+    } );
+    </script>
+    <style>
+    .ui-menu { width: 150px; }
+  </style>
+  <script>
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+  </script>
+  <!-- DIALOG -->
+  <script>
+    $( function() {
+      $( "#dialog" ).dialog();
+    } );
+    </script>
+  <!-- BUTTON -->
+  <script>
+    $( function() {
+      $( ".widget input[type=submit], .widget a, .widget button" ).button();
+      $( "button, input, a" ).click( function( event ) {
+        event.preventDefault();
+      } );
+    } );
+  </script>
+  
+
+</head>
+<body>
+ 
+<div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <script>
+        // JSON WRITING 
+        let employ = '{ "employees" : [' +
+        '{ "firstName":"Anna" , "lastName":"Karelina" },' +
+        '{ "firstName":"Magika" , "lastName":"Madoka" },' +
+        '{ "firstName":"Naruto" , "lastName":"Boruto" } ]}';
+        const obj = JSON.parse(employ);
+        document.getElementById("display").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
+        document.write(obj.employees[0].firstName);
+        document.write("\n <br>")
+        // Functions 
+        greet = (arg) => {
+            return arg;
+        }
+
+        // all methods to print
+        let greet_ = greet("hello world")
+        document.write(greet("hello world"));
+        document.write("\n <br>")
+        document.getElementById("display2").innerHTML = greet("hello world");
+        window.alert(greet("hello world"));
+        alert(greet("hello wolrd"));
+        document.write("\n <br>")
+        document.getElementById("display2").innerHTML = greet_;
+        console.log(greet("hello world"))
+        document.writeln(greet("hello world"));
+        
+        // functions 
+        const func = {
+            fName : "tek",
+            lName : "king",
+            fullName  : function(){
+                return this.firstName + this.lastName;
+            }
+        }
+        // details of instantciate object 
+        const details = {
+            firstName : "elon",
+            lastName  : "mask"
+        }
+        let full = func.fullName.bind(details);
+        document.write("\n <br>");
+        document.write(full());
+        document.write("\n <br>");
+        document.write(func.fullName.call(details));
+        document.write("\n <br>")
+        document.write(func.fullName.apply(details));
+        document.write("\n <br>")
+        document.getElementById("display3").innerHTML = func.fullName.call(details);
+
+
+    </script>
+</body>
+</html>

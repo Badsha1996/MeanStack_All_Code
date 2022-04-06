@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS STYLESHEET LINK -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Math</title>
+</head>
+<body>
+   
+    <!--***************************************************************
+                       MATH EXPLORATION IN JAVAScript BASIC
+    *******************************************************************-->
+    <script>
+        // VARIABLE DECLARATION AND FUNCTION CALL
+        var pi_          = Math.PI;
+        let round_number = Math.round(6.51); 
+        let power_       = Math.pow(10,2);
+        let sqrt_        = Math.sqrt(36);
+        let sin_         = Math.sign(90);
+        let cos_         = Math.cos(90);
+        let random_      = Math.random()*100;
+        let floor_       = Math.floor(4.00099);
+        let ceil_        = Math.ceil(4.00099);
+        let e_value      = Math.E;
+        let absolute     = Math.abs(3.456);
+        let max_         = Math.max(90,56);
+        let min_         = Math.min(56,60);
+        let expo         = Math.exp(4,6);
+        
+    </script>
+    
+    <!--***************************************************************
+                       TABLE DEFINATIONS(BOOTSTRAP)
+    *******************************************************************-->
+    <!-- TABLE SECTIONS -->
+    <div style="overflow-x:auto;display: none;"class="container" id="math">
+        <table class="table table-bordered">
+            <tr>
+                <td>PI</td>
+                <td>ROUND</td>
+                <td>POWER</td>
+                <td>SQUAR ROOT</td>
+                <td>SIN</td>
+                <td>COS</td>
+                <td>RANDOM</td>
+                <td>FLOOR</td>
+                <td>CEIL</td>
+                <td>ABSOLUTE</td>
+                <td>MAX</td>
+                <td>MIN</td>
+                <td>LOG2</td>
+                <td>LOG102</td>
+                <td>LOG10</td>
+                <td>EXPO</td>
+            </tr>
+            <tr>
+                
+                <td><script> document.write(pi_)</script></td>
+                <td><script> document.write(round_number)</script></td>
+                <td><script> document.write(power_)</script></td>
+                <td><script> document.write(sqrt_)</script></td>
+                <td><script> document.write(sin_)</script></td>
+                <td><script> document.write(cos_)</script></td>
+                <td><script> document.write(random_)</script></td>
+                <td><script> document.write(floor_)</script></td>
+                <td><script> document.write(ceil_)</script></td>
+                <td><script> document.write(absolute)</script></td>
+                <td><script> document.write(max_)</script></td>
+                <td><script> document.write(min_)</script></td>
+                <td><script> document.write(Math.LN2)</script></td>
+                <td><script> document.write(Math.LOG10E)</script></td>
+                <td><script> document.write(Math.LN10)</script></td>
+                <td><script> document.write(expo)</script></td>
+            </tr>
+    </table>
+    </div>
+
+    <script>
+        // FUNCTION STATEMENT
+         function showTable(){
+             var A = document.getElementById("math");
+             A.style.display = "block"; 
+             
+         }
+         function hide(){
+            var A = document.getElementById("math");
+             A.style.display = "none"; 
+         }
+     </script>
+
+    <!-- BUTTON STRUCTURE -->
+   <div id="home-btn" class="text-center">
+    <button type="button" class="btn-general btn-white" onclick="showTable()">SHOW</button>
+    <button type="button" class="btn-general btn-white" onclick="hide()">HIDE</button>
+   </div>
+   
+</body>
+</html>

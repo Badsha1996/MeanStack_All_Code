@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numberDemo</title>
+</head>
+<body>
+    <!--***************************************************************
+                        NUMBER EXPLORATION IN JAVA BASIC
+    *******************************************************************-->
+    <p id="number"></p>
+    <script>
+        // VARIABLE DECLARATIONS
+        let num = 90;
+        let numPoint = 10.9863;
+
+        // PRINT FUCTIONS CALL 
+        document.getElementById("number").innerHTML = num;
+        document.write(num.toString(),"\n <br>"); // num to string // tofixed ==> for precision point
+        document.write(numPoint.toFixed(3),"\n <br>");
+        document.write(numPoint.toPrecision(4),"\n <br>");
+        document.write(num.valueOf(),"\n <br>");
+        document.write(num.toExponential(2),"\n <br>");
+        document.write(Number("678"),"\n <br>");
+        document.write(parseInt(numPoint),"\n <br>"); // parseInt
+        document.write(parseFloat(numPoint),"\n <br>");
+        
+        // AGREGATE FUNCTIONS
+        document.write(Number.MAX_VALUE,"\n <br>");
+        document.write(Number.NEGATIVE_INFINITY,"\n <br>");
+        document.write(Number.MAX_SAFE_INTEGER,"\n <br>");
+        document.write(Number.MIN_SAFE_INTEGER,"\n <br>");
+        document.write(Number.MAX_SAFE_INTEGER,"\n <br>");
+
+
+
+    </script>
+    
+</body>
+</html>

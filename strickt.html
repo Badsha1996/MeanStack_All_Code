@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display1"></p>
+    <script>
+        
+        // let for = 10;
+        // function check(){
+        //     "use strict"
+        //     let num2 = 100;
+        // }
+        // check()
+        // ARROW FUNCTION
+        sayHello = () => "hello world" + Date(); 
+        document.getElementById("display").innerHTML = sayHello() + "\n <br>";
+
+
+        sayHi = () => document.write("Hello world");
+        sayHi();
+
+        runLoop = () => {for(i=0;i<10;i++){
+            document.write(i);
+        }};
+        document.write("\n <br>");
+        runLoop();
+        document.write("\n <br>");
+
+
+        // CLASS AND OBJECTS
+        class employee{
+            constructor(name, salary, manager, birth, id){
+                this.name    = name;
+                this.salary  =salary;
+                this.manager = manager;
+                this.id      = id;
+                this.birth   = birth;
+            }
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.birth;
+            }
+        }
+        // CLASSS -> ARROW FUNCTION
+        instantiate = () =>{
+            obj1 = new employee("tekking", 34000, "one", 1990, 90);
+            var res =  obj1.name + " has salary of " + obj1.salary + "at the age of " + obj1.age();
+            document.write(res);
+        }
+        // document.write(instantiate());
+        // DRIVER IF __NAME__==__MAIN__;
+
+    </script>
+    <button type="submit" onclick="instantiate()">show</button>
+</body>
+</html>

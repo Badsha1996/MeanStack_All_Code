@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "cs2">This is here</p>
+    <h1 onmouseover="changeTo(this)">click me</h1>
+    <h1 id = "t1" ondblclick="display()">Date</h1>
+    <!-- <button ondblclick=document.getElementById("cs2").style.color="yellow">Click here</button> -->
+    <script>
+        function changeTo(id){
+            id.style.color = "red";
+            id.style.fontSize = "20px"
+        }
+        function display(){
+            document.getElementById("t1").innerHTML = Date();
+        }
+    </script>
+
+    <p>select here</p>
+    <select id="selection" onchange = "onchangefunction()">
+        <option value="BE">BE</option>
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+    </select>
+
+    <h1 id="demo"></h1>
+    <script>
+        function onchangefunction(){
+            var show = document.getElementById("selection").value;
+            document.getElementById("demo").innerHTML="your selection : " + show;
+        }
+    </script>
+
+    <p id="text1"></p>
+    <p id="len"></p>
+    <p id="type"></p>
+    <p id="typeobj"></p>
+    <script>
+        let name = "tekking";
+        let hobby = "video";
+        let escape = "\"eating\" is good";
+        let longLine = "fffffffffffffffffffffffffffffffff \
+        sssssssssssssssssss";
+        let object1 = new String("object string");
+        let object2 = new String("object string");
+        document.getElementById("text1").innerHTML = "Name : " + name + "<br>"; 
+        document.getElementById("len").innerHTML = "Length : " + name.length + "<br>";
+        document.getElementById("type").innerHTML = typeof object1;
+        document.getElementById("type").innerHTML = (name==hobby);
+        document.getElementById("typeobj").innerHTML = (object1==object2);
+    </script>
+    <!-- STRING METHODS -->
+    <p id = "slice"></p>
+    <p id = "replace"></p>
+    <p id = "up"></p>
+    <p id = "concat"></p>
+    <p id = "trim"></p>
+    <p id = "pad"></p>
+    <p id = "strip"></p>
+    <script>
+        let string_slice = "hello hello world";
+        document.getElementById("slice").innerHTML = string_slice.slice(2,6); //substring or substr
+        document.getElementById("replace").innerHTML = string_slice.replace(/hello/ig, "bye");
+        document.getElementById("up").innerHTML = string_slice.toLocaleUpperCase();
+        // concat, trim
+        document.getElementById("concat").innerHTML = string_slice.concat(" Everyone");
+        document.getElementById("pad").innerHTML = string_slice.charAt(0); // charcodeat(0)==> ASCII value
+        document.getElementById("strip").innerHTML = string_slice.split(" ")[0]; 
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

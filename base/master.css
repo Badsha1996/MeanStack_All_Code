@@ -1,0 +1,155 @@
+
+	body {
+		background-color : skyblue;
+		
+		
+		}
+	p 	 {
+		color :red;
+		font-family : arial;
+		border : 5px solid green;
+		padding : 10px;
+		margin  : 30px
+		}
+	
+	h5  {
+		font-size : 20px;
+		border : 20px solid black;
+		padding : 10px;
+		}
+	h6	{
+		font-size :100%;
+		}
+
+	a:link {
+		color : gold;
+		backgorund-color : transparent;
+		text-decoration : none;
+	}
+	a:visited {
+		color : grey;
+		backgorund-color : transparent;
+		text-decoration : none;
+	}
+	a:hover {
+		color : black;
+		backgorund-color : transparent;
+		text-decoration : underline;
+	}
+	a:active {
+		color : red;
+		backgorund-color : transparent;
+		text-decoration : underline;
+	}
+	
+	img {
+		height : 100%;
+		width : 100%;
+	}
+	
+	table, th, td {
+		border : 2px solid black;
+		border-collapse : collapse;
+		
+	}
+	
+	th, td {
+		padding : 5px;
+		text-align : center;
+	}
+	
+	table {
+		border-spacing : 10px;
+		
+	}
+	
+	caption {
+		font-family : verdana;
+		font-size :  30px;
+		color : red;
+	}
+	#table1 {
+		background-color : rgb(221, 211, 211);
+		font-family  : arial;
+		font-size  : 10px;
+	}
+	
+	#theader1 {
+		font-size : 20px;
+	}
+	
+	div {
+		border : 2px solid black;
+		background-color : grey; 
+		text-align : center;
+		background-image : url("./img/img1.png");
+		background-repeat : no-repeat;
+		font-size : 20px;
+		
+		
+	}
+	
+	
+	.toc {
+		background-color : pink;
+		color : white;
+		margin : 20px;
+		padding : 20px;
+	}
+	*{
+	box-sizing :border-box;
+	}
+	
+	header {
+		background-color : tomato;
+		padding  : 20px;
+		text-align : center;
+		font-size : 40px;
+		color : yellow;
+	}
+	
+	nav {
+		float : left;
+		width : 60%;
+		height : 200px;
+		
+	}
+	
+	nav ul {
+		list-style-type : none;
+	}
+	
+	article {
+		float : left;
+		padding : 20px;
+		width :40%;
+		background-color: green;
+	}
+	
+	section::after {
+		content : "";
+		padding : 10px;
+		text-align : center;
+		color : white;
+	}
+	
+	footer {
+		background-color : grey;
+		padding : 5px;
+		text-align : center;
+		color : white;
+	}
+	
+	code {
+		background-color : grey;
+		text-align : center;
+		color : white;
+		
+	}
+	
+	kbd {
+		font-size : 30px;
+	}
+	
+	
+		

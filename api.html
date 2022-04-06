@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="getLocation()">click here</button>
+    <h1 id="display"></h1>
+    <input id="id1"  type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
+
+    <p id="demo1"></p>
+    <button id="back" onclick="back()">back</button>
+    <button id="ford" onclick="ford()">forward</button>
+    <button id="twoLevel" onclick="window.history.back(-2)">Back</button>
+    <script>
+        var x = document.getElementById("display");
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+        function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude +
+        "<br>Position: " + position.coords.position;
+        }
+
+        // VALIDITY PASSWORDS
+        
+
+
+        function myFunction() {
+        const inpObj = document.getElementById("id1");
+        let text = "Value OK";
+        if (!inpObj.checkValidity()) {
+            document.getElementById("demo1").innerHTML = inpObj.validationMessage;
+        }
+        else if (document.getElementById("id1").validity.rangeOverflow) {
+            document.getElementById("demo1").innerHTML = "Value is too large";
+        }
+        else if (document.getElementById("id1").validity.rangeUnderflow) {
+            text = "Value too small";
+            document.getElementById("demo1").innerHTML = text;
+        }else{
+            document.getElementById("demo1").innerHTML = text;
+        }
+        }
+        // HISTORY BACK 
+        function back(){
+            window.history.back();
+        }
+        function ford(){
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>

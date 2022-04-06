@@ -1,0 +1,34 @@
+
+.text{
+    font-weight: 300;
+    font-size: 15px;
+    color: #3F5957;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+/*================================================================================
+                         ********Button(generic)*********
+                    +++++++++++++[GHOST BUTTON EFFECT]+++++++++++
+==================================================================================*/
+
+.btn-general {
+  border-width: 3px;
+  border-radius: 7%;
+  padding: 12px 26px 12px 26px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-white {
+  border-color: rgb(180, 180, 180);
+  color: rgb(0, 0, 0);
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  background-color: rgb(255, 251, 251);
+  color: #173d3d;
+}
+
+

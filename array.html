@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+        <!--***************************************************************
+                        ARRAY AND MAP EXPLORATION IN JAVA BASIC
+        *******************************************************************-->
+    <p id="arr"></p>
+    <p id="displayDate"></p>
+    <script>
+        // ARRAY DECLARARTION 
+        const arr1 = ["car1", "car3", "car2"];
+        document.getElementById("arr").innerHTML = arr1;
+        document.write(arr1,"\n <br>");
+        document.write(arr1.reverse(),"\n <br>");
+        document.write(arr1.length,"\n <br>");
+        document.write(arr1.sort(),"\n <br>");
+        document.write(arr1.join(""),"\n <br>");
+        document.write(arr1.slice(),"\n <br>");
+        document.write(arr1.push("car4"),"\n <br>");
+        document.write(arr1,"\n <br>");
+        document.write(arr1.pop(),"\n <br>");
+        document.write(arr1,"\n <br>");
+        document.write("\n <br>");
+
+        // BLANK ARRAY FOR SIZE UNDEFINED
+        const blankArr = [3];
+        blankArr[0] = "tekk";
+        blankArr[1] = "king";
+        document.write(blankArr,"\n <br>");
+
+        const objArr = new Array("hello", "world");
+        document.write(objArr,"\n <br>");
+
+        // MAP DECLARATION FOR o(CONSTANT) ACCESS
+        const mapArr = {greet: "welcome", word:"hello"};
+        document.write(mapArr.greet,"\n <br>");
+        document.write(mapArr.size,"\n <br>");
+        document.write("\n <br>");
+
+        // JS DATE AND TIMESTAMPS
+        // UTC = 1st jan 1970 (universal time cordinate)
+        let date_ = new Date();
+        let date1_ = new Date(1990,03,23,04,5);
+        let date2_ = new Date(2014);
+        let utcDate = new Date(10000);
+        document.write(date_,"\n <br>");
+        document.write(date_.getDate(),"\n <br>");
+        document.write(date_.getFullYear(),"\n <br>");
+        document.write(date_.getTimezoneOffset(),"\n <br>");
+        document.write(date_.toJSON(),"\n <br>");
+        document.write(date_.toString(),"\n <br>");
+        document.write(date_.toUTCString(),"\n <br>");
+        document.write(date1_,"\n <br>");
+        document.write(utcDate,"\n <br>");
+
+        // SETING NEW DATE #setter & #getter method test: 1
+        date_.setFullYear(1990);
+        document.write(date_.getFullYear(),"\n <br>");
+        document.getElementById("displayDate").innerHTML = date_.getFullYear();
+        
+
+    </script>
+</body>
+</html>

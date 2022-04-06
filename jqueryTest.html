@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    
+    <script>
+        // function greet(name, callback){
+        //     document.write("hello world");
+        //     // document.getElementById("display").innerHTML = ("hi" + " " + name);
+        // }
+        // function callme(){
+        //     document.getElementById("display1").innerHTML = ("i am call back");
+        // }
+        // function sayName(name){
+        //     document.write("hello" + " "+ name)
+        // }
+        // setTimeout(greet, 2000);
+        // sayName("tekking");
+
+
+        // function reqListener () {
+        // document.write(this.responseText);
+        // }
+
+        // var oReq = new XMLHttpRequest();
+        // oReq.addEventListener("load", reqListener);
+        // oReq.open("GET", "https://badsha1996.github.io/resume/");
+        // oReq.send();
+
+        function displayer(value) {
+            document.getElementById("display").innerHTML = value;
+        }
+        function getFile(myCallBack){
+            let r1 = new XMLHttpRequest();
+            r1.open('GET', "ajax.txt");
+            r1.onload = function(){
+                if (r1.status == 200){
+                    myCallBack(this.responseText);
+                }else{
+                    myCallBack("Error");
+                }
+            }
+            r1.send()
+        }
+        getFile(displayer);
+
+        const xhr = new XMLHttpRequest()
+        xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            xhr.status === 200 ? document.write(xhr.responseText) : document.write('error')
+        }
+        }
+        xhr.open('GET', 'https://www.google.com')
+        xhr.send()
+        
+    </script>
+</body>
+</html>

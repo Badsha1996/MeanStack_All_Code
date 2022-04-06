@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display1"></p>
+    <script>
+        /*********************************
+            CONTROL AND FLOW STATEMENTS
+        *********************************/
+        if(new Date().getDate()>6){
+            document.write("long",'\n <br>');
+        }else{
+            document.write("small",'\n <br>');
+        }
+        let day = new Date().getDay();
+        switch(day){
+            case 1:
+                document.write("monday");
+                break;
+            case 2:
+                document.write("teusday");
+                break;
+            case 3:
+                document.write("wednesday");
+                break;
+            default:
+                document.write("whateverday");
+        }
+        document.write('\n <br>');
+        
+
+        const arr = ["b", "a", "d", "s", "h", "a"]
+        const name = arr.reverse();
+
+        for (let i = arr.length-1, len = arr.length; i>=0; i-- ){
+            document.write(name[i],'\n <br>');
+
+        }
+        // for (; i>=0;){
+        //     document.write(name[i]);
+        //     i-- ;
+        // }
+
+        /*********************************
+        AVERAGE NUMBER - BASIC LEVEL DIV 0.
+        *********************************/
+       // Average of a number
+        const number = {num1: 34,num2:60,num3:49};
+        let total = 0;
+        let count = 0;
+        for(let i in number){
+            total += number[i];
+            count++;
+        }
+        let average = total / count;
+        document.write(average);
+
+        document.write('\n <br>')
+        
+
+        let arr3 = ["h", "j", "k"];
+        for (let i of arr3){
+            document.write(i,'\n <br>');
+        }
+
+        let sum = 0;
+        const numbers = [65, 44, 12, 4];
+        numbers.forEach(myFunction);
+        document.write(sum)
+        function myFunction(item) {
+        sum += item;
+        }
+
+        // While loop
+        let i = 10;
+        while(i--){
+            if (i<10){
+                document.write(i);
+                continue;
+            }else{
+                break;
+            }
+        }
+        // SUPER BASIC STUFF
+        document.write('\n <br>')
+        for (i = 0;i<10;i++){
+            if (i<5){
+                document.write(i);
+                continue;
+            }
+        }
+        /*********************************
+                 BASIC - SETS THEORY
+        *********************************/
+        function fun(arg1){
+            document.write(arg1+" ");
+        }
+        document.write('\n <br>')
+        const set_ = new Set(["hello", "world", "world"]);
+        let len = set_.size;
+        set_.add("welcome");
+        set_.delete("welcome");
+        let bool_ = set_.has("hello");
+        document.write(bool_,'\n <br>')
+        set_.forEach(fun);
+        document.write('\n <br>')
+        var arr1 = set_.entries();
+        document.write(arr1.next().value,"\n <br>");
+        var arr2 = set_.values();
+        document.write(arr2.next().value,"\n <br>");
+        set_.clear()
+        /*********************************
+                 MAPs THEORY
+        *********************************/
+        document.write('\n <br>')
+        const dic_ = new Map([
+            ["key1", 1],
+            ["key2", 2],
+            ["key3", 3]
+        ])
+        dic_.set("key4", 4);
+        dic_.delete("key3");
+        dic_.keys();
+        dic_.values()
+        var ent1 = dic_.entries()
+        var ent2 = dic_.values()
+        document.write(ent1.next().value,"\n <br>");
+        document.write(ent2.next().value,"\n <br>");
+        dic_.has("key4");
+        document.write(dic_.get("key1"),"\n <br>");
+        dic_.forEach(fun);
+        dic_.clear();
+        /*********************************
+                 EXTRA
+        *********************************/
+        document.write(typeof 90 +"<hr>"+ typeof "hello world"+"<hr>"+ typeof new Date() +"<hr>"+typeof null +"<hr>"+ typeof NaN +"<hr>"+ typeof 'A'+"<hr>"+ typeof function fun(){return 0;}+"<hr>"+typeof [1,2,3])
+        // ERROR HANDLEING 
+        document.write('\n <br>')
+        try{
+            alber("hello world"); // reference error
+            document.getElementById("display").innerHTML = eval("'hh"); //sysntax error
+            document.write(1.9999.toPrecision(9)); //1-100 outside that rangeerror
+            // document.write(56.toUpperCase()); // type error
+            // decodeURI("%%%") // uri error
+        }catch(err){
+            document.write(err.message);
+            document.write('\n <br>')
+            document.write(err.name);
+            document.getElementById("display1").innerHTML = err.name; //err.name => show u the name 
+        }
+    </script>
+</body>
+</html>

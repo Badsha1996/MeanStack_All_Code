@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test"></p>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <script>
+        localStorage.setItem("firstProgram", "hello world") //sessionStorage
+        document.getElementById("test").innerHTML = localStorage.getItem("firstProgram");
+        
+        sessionStorage.setItem("firstProgram2", "hello");
+        document.getElementById("test2").innerHTML = sessionStorage.getItem("firstProgram2");
+
+        document.getElementById("test1").innerHTML = sessionStorage.length;
+        sessionStorage.removeItem("firstProgram2")
+        document.getElementById("test3").innerHTML = sessionStorage.getItem("firstProgram2");
+    </script>
+</body>
+</html>
